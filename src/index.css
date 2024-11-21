@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 20 14.3% 4.1%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+  body {
+    @apply bg-gradient-to-br from-yellow-50 to-orange-50 min-h-screen;
+  }
+}
+
+.range-slider {
+  @apply appearance-none w-full h-2 rounded-lg bg-gray-200;
+}
+
+.range-slider::-webkit-slider-thumb {
+  @apply appearance-none w-6 h-6 rounded-full bg-yellow-500 cursor-pointer hover:bg-yellow-600 transition-colors;
+  -webkit-appearance: none;
+}
+
+.range-slider::-moz-range-thumb {
+  @apply w-6 h-6 rounded-full bg-yellow-500 cursor-pointer border-none hover:bg-yellow-600 transition-colors;
+}
